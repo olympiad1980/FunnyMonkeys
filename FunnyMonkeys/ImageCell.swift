@@ -3,7 +3,7 @@ import UIKit
 
 class ImageCell: UICollectionViewCell {
     
-    var setupImage: Profile? {
+    var profile: Profile? {
         didSet {
             setupIU()
         }
@@ -14,10 +14,10 @@ class ImageCell: UICollectionViewCell {
     @IBOutlet weak var iconsImage: UIImageView!
     
     func setupIU() {
-        if let photo = setupImage, let count = setupImage, let icon = setupImage {
-            photoImage.image = UIImage(named: photo.image[0])
-            iconsImage.image = UIImage(named: icon.icons)
-            counts.text = count.image.count.description
+        if let property = profile {
+            photoImage.image = UIImage(named: property.image[0])
+            iconsImage.image = UIImage(named: property.icons)
+            counts.text = property.image.count.description
         }
     }
 }

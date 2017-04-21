@@ -5,9 +5,10 @@ class CollectionVC: UIViewController {
     static var cellIdentifier = "ImageCell"
     static var segueIdentifier = "goToScrollImage"
     
-    let sectionInsets = UIEdgeInsets(top: 50.0, left: 50.0, bottom: 50.0, right: 50.0)
+    let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     let itemsPerRows: CGFloat = 2
     
+    @IBOutlet weak var collectionView: UICollectionView!
     var profile = ProfileFactory().createProfile()
     
     override func viewDidLoad() {
@@ -22,9 +23,18 @@ class CollectionVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == CollectionVC.segueIdentifier {
             if let nextVC = segue.destination as? ScrollImageVC {
-                nextVC.profileProp = sender as? Profile
+                nextVC.profilesProp = sender as? Profile
             }
         }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        coordinator.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) in
+            self.collectionView.reloadData()
+        }) { (UIViewControllerTransitionCoordinatorContext) in
+            
+        }
+        super.viewWillTransition(to: size, with: coordinator)
     }
 }
 
@@ -38,7 +48,7 @@ extension CollectionVC: UICollectionViewDataSource, UICollectionViewDelegate {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionVC.cellIdentifier, for: indexPath) as! ImageCell
         let profileIndexPath = profile[indexPath.row]
-        cell.setupImage = profileIndexPath
+        cell.profile = profileIndexPath
         
         return cell
     }
@@ -49,7 +59,7 @@ extension CollectionVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let paddingSpace = sectionInsets.left * (itemsPerRows + 1)
-        let avaiLableWhith = view.frame.width - paddingSpace
+        let avaiLableWhith = collectionView.frame.width - paddingSpace
         let whithPerItem = avaiLableWhith / itemsPerRows
         
         let sizeItem = CGSize(width: whithPerItem, height: whithPerItem)

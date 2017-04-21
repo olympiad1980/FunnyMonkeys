@@ -12,6 +12,10 @@ class Profile {
         self.image = image
         self.icons = icons
     }
+    
+    convenience init(name: String, image: [String]) {
+        self.init(name: name, image: image, icons: "")
+    }
 }
 
 class ProfileFactory {
@@ -19,15 +23,16 @@ class ProfileFactory {
     func createProfile() -> [Profile] {
         
         let profileArray = [
-            Profile(name: "Lena", image: ["n01", "n02", "n03", "n02"], icons: "Camera"),
-            Profile(name: "Olya", image: ["n03", "n04", "n05"], icons: "Camera"),
-            Profile(name: "Sveta", image: ["n02", "n01", "n04"], icons: "Camera"),
-            Profile(name: "Nina", image: ["n01", "n05"], icons: "Camera"),
-            Profile(name: "Lesya", image: ["n05", "n014", "n03"], icons: "Camera"),
-            Profile(name: "Katya", image: ["n01"], icons: "Camera"),
-            Profile(name: "Natali", image: ["n04", "n01", "n05", "n01"], icons: "Camera"),
-            Profile(name: "Olga", image: ["n01", "n05"], icons: "Camera"),
-            Profile(name: "Lena", image: ["n01", "n02", "n01"], icons: "Camera")
+            Profile(name: "Pongo", image: ["portreti-obezian-42", "portreti-obezian-2", "portreti-obezian-4", "portreti-obezian-11"], icons: "Camera"),
+            Profile(name: "Cercopithecus", image: ["portreti-obezian-44", "portreti-obezian-3", "portreti-obezian-10"], icons: "Camera"),
+            Profile(name: "Pan", image: ["portreti-obezian-15", "portreti-obezian-32", "portreti-obezian-34", "portreti-obezian-38"], icons: "Camera"),
+            Profile(name: "Cebus", image: ["portreti-obezian-40", "portreti-obezian-28"], icons: "Camera"),
+            Profile(name: "Hylobatidae", image: ["portreti-obezian-27", "portreti-obezian-21", "portreti-obezian-6"], icons: "Camera"),
+            Profile(name: "...", image: ["portreti-obezian-13", "portreti-obezian-5"], icons: "Camera"),
+            Profile(name: "Baboon", image: ["portreti-obezian-18", "portreti-obezian-20", "portreti-obezian-23", "portreti-obezian-30"], icons: "Camera"),
+            Profile(name: "Macaca", image: ["portreti-obezian-16", "portreti-obezian-7", "portreti-obezian-1"], icons: "Camera"),
+            Profile(name: "Cercopithecus sclateri", image: ["portreti-obezian-37", "portreti-obezian-12"], icons: "Camera"),
+            Profile(name: "Mandrillus sphinx", image: ["portreti-obezian-31", "portreti-obezian-36", "portreti-obezian-41"], icons: "Camera")
         ]
         return profileArray
     }
