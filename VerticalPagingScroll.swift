@@ -34,6 +34,7 @@ class VerticalPagingScroll: UIViewController {
         scroll.bounces = false
         
         scroll.addSubview(initScrollViewWhithImage())
+        scroll.addSubview(dataScrollView())
         scroll.addSubview(initPlate())
         scroll.addSubview(initlabelForName())
         scroll.addSubview(smileButtonAction())
@@ -59,6 +60,20 @@ class VerticalPagingScroll: UIViewController {
         scrollView.contentSize.width = scrollView.frame.size.width * CGFloat(profile.count)
         return scrollView
     }
+    
+    func dataScrollView() -> UIScrollView {
+        let scroll = UIScrollView()
+        let heightScroll = initScrollViewWhithImage().frame.size.height
+        let mainSize = mainScrollView.bounds.size
+        
+        scroll.frame = CGRect(x: 0, y: heightScroll, width: mainSize.width, height: mainSize.height)
+        scroll.contentSize.height = mainSize.height + heightScroll
+        scroll.backgroundColor = UIColor.brown
+        
+        return scroll
+    }
+    
+  // MARK: плашка
     
     func initPlate() -> UIView {
         let plate = UIView()
