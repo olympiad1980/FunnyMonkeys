@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4go-x9-djA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -102,10 +102,28 @@
             </objects>
             <point key="canvasLocation" x="644" y="83"/>
         </scene>
-        <!--Start Download-->
+        <!--View Controller-->
+        <scene sceneID="4I7-A1-h2w">
+            <objects>
+                <viewController id="6yH-hh-tXT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="02E-f4-jgk"/>
+                        <viewControllerLayoutGuide type="bottom" id="mzl-9S-vkd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r5B-OT-vGm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yj3-je-6hA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-434.39999999999998" y="-858.62068965517244"/>
+        </scene>
+        <!--Vertical Paging Scroll-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartDownload" customModule="FunnyMonkeys" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="VerticalPagingScroll" customModule="FunnyMonkeys" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -113,12 +131,26 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dez-nC-dlT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dez-nC-dlT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1GK-Sp-M78"/>
+                            <constraint firstItem="Dez-nC-dlT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Ro-Od-m7A"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dez-nC-dlT" secondAttribute="bottom" id="gvX-SF-T20"/>
+                            <constraint firstAttribute="trailing" secondItem="Dez-nC-dlT" secondAttribute="trailing" id="zCe-Cj-leD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainScrollView" destination="Dez-nC-dlT" id="RCU-cU-qNc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="70"/>
+            <point key="canvasLocation" x="-458.39999999999998" y="69.715142428785612"/>
         </scene>
         <!--Scroll ImageVC-->
         <scene sceneID="UyH-J2-Byq">

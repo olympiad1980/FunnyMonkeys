@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		84117E951E9CEE9F0085BA45 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117E941E9CEE9F0085BA45 /* CollectionVC.swift */; };
 		84117E971E9D22530085BA45 /* ScrollImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117E961E9D22530085BA45 /* ScrollImageVC.swift */; };
+		843A94541EA9FDA100373AC2 /* HorizontalPagingScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A94531EA9FDA100373AC2 /* HorizontalPagingScroll.swift */; };
+		843A94561EA9FDD900373AC2 /* VerticalPagingScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A94551EA9FDD900373AC2 /* VerticalPagingScroll.swift */; };
+		84ACBE581EAE63D60042C9C3 /*  Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACBE571EAE63D60042C9C3 /*  Attributes.swift */; };
 		84D9AC661E9F9B9E00096D97 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9AC651E9F9B9E00096D97 /* Extension.swift */; };
 		84E463D01E9CBCD5006FAC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E463CF1E9CBCD5006FAC02 /* AppDelegate.swift */; };
 		84E463D51E9CBCD5006FAC02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E463D31E9CBCD5006FAC02 /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		84117E941E9CEE9F0085BA45 /* CollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionVC.swift; path = ../CollectionVC.swift; sourceTree = "<group>"; };
 		84117E961E9D22530085BA45 /* ScrollImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollImageVC.swift; sourceTree = "<group>"; };
+		843A94531EA9FDA100373AC2 /* HorizontalPagingScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalPagingScroll.swift; path = ../HorizontalPagingScroll.swift; sourceTree = "<group>"; };
+		843A94551EA9FDD900373AC2 /* VerticalPagingScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerticalPagingScroll.swift; path = ../VerticalPagingScroll.swift; sourceTree = "<group>"; };
+		84ACBE571EAE63D60042C9C3 /*  Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = " Attributes.swift"; path = "../ Attributes.swift"; sourceTree = "<group>"; };
 		84D9AC651E9F9B9E00096D97 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = ../Extension.swift; sourceTree = "<group>"; };
 		84E463CC1E9CBCD5006FAC02 /* FunnyMonkeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunnyMonkeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E463CF1E9CBCD5006FAC02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843A94571EA9FDF500373AC2 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				843A94531EA9FDA100373AC2 /* HorizontalPagingScroll.swift */,
+				843A94551EA9FDD900373AC2 /* VerticalPagingScroll.swift */,
+				84ACBE571EAE63D60042C9C3 /*  Attributes.swift */,
+			);
+			name = Examples;
+			sourceTree = "<group>";
+		};
 		84E463C31E9CBCD5006FAC02 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				84E463D31E9CBCD5006FAC02 /* Main.storyboard */,
+				843A94571EA9FDF500373AC2 /* Examples */,
 				84E463E11E9CBCDC006FAC02 /* Controller */,
 				84E463E31E9CBCF9006FAC02 /* Cell */,
 				84E463E41E9CBD3E006FAC02 /* Model */,
@@ -184,11 +201,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D9AC661E9F9B9E00096D97 /* Extension.swift in Sources */,
+				843A94561EA9FDD900373AC2 /* VerticalPagingScroll.swift in Sources */,
 				84E463E61E9CBD58006FAC02 /*  Profile.swift in Sources */,
 				84117E971E9D22530085BA45 /* ScrollImageVC.swift in Sources */,
 				84E463EE1E9CC10A006FAC02 /* ImageCell.swift in Sources */,
 				84117E951E9CEE9F0085BA45 /* CollectionVC.swift in Sources */,
 				84E463D01E9CBCD5006FAC02 /* AppDelegate.swift in Sources */,
+				84ACBE581EAE63D60042C9C3 /*  Attributes.swift in Sources */,
+				843A94541EA9FDA100373AC2 /* HorizontalPagingScroll.swift in Sources */,
 				84F1FC291EA639EB00ACA911 /* ProfileImageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
