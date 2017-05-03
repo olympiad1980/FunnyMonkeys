@@ -73,7 +73,7 @@ class VerticalPagingScroll: UIViewController {
         return scroll
     }
     
-  // MARK: плашка
+// MARK: плашка
     
     func initPlate() -> UIView {
         let plate = UIView()
@@ -105,6 +105,7 @@ class VerticalPagingScroll: UIViewController {
         return image
     }
     
+// MARK: функция image Smile
     func smileButtonAction() -> UIButton {
         let button = UIButton()
         button.frame = CGRect(x: initPlate().center.x, y: initPlate().frame.origin.y + 20, width: 30, height: 30)
@@ -116,7 +117,7 @@ class VerticalPagingScroll: UIViewController {
         return button
     }
     
-    
+// MARK: функция Alert
     func alertButtonAction() -> UIButton {
         let button = UIButton()
         let xPosition = (initPlate().frame.origin.x + initPlate().frame.origin.y) - 20

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6yH-hh-tXT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="644" y="83"/>
         </scene>
-        <!--View Controller-->
+        <!--For Test Controller-->
         <scene sceneID="4I7-A1-h2w">
             <objects>
-                <viewController id="6yH-hh-tXT" sceneMemberID="viewController">
+                <viewController id="6yH-hh-tXT" customClass="ForTestController" customModule="FunnyMonkeys" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="02E-f4-jgk"/>
                         <viewControllerLayoutGuide type="bottom" id="mzl-9S-vkd"/>
@@ -113,8 +113,62 @@
                     <view key="view" contentMode="scaleToFill" id="r5B-OT-vGm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vkP-lH-6hc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SQ-aP-apv">
+                                <rect key="frame" x="0.0" y="517" width="375" height="150"/>
+                                <subviews>
+                                    <view alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCt-KM-wjS" customClass="UIviewX" customModule="FunnyMonkeys" customModuleProvider="target">
+                                        <rect key="frame" x="137" y="25" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbY-im-yow">
+                                        <rect key="frame" x="157" y="45" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="Down"/>
+                                        <connections>
+                                            <action selector="pushButtonAction:" destination="6yH-hh-tXT" eventType="touchUpInside" id="tcd-sV-QXA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="gFC-KD-T4V"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8SQ-aP-apv" secondAttribute="trailing" id="6nf-KP-9hY"/>
+                            <constraint firstAttribute="trailing" secondItem="vkP-lH-6hc" secondAttribute="trailing" id="FJY-ec-4Qz"/>
+                            <constraint firstItem="mzl-9S-vkd" firstAttribute="top" secondItem="vkP-lH-6hc" secondAttribute="bottom" id="OeO-a2-n0T"/>
+                            <constraint firstItem="vkP-lH-6hc" firstAttribute="leading" secondItem="r5B-OT-vGm" secondAttribute="leading" id="cIF-xg-CUS"/>
+                            <constraint firstItem="vkP-lH-6hc" firstAttribute="top" secondItem="r5B-OT-vGm" secondAttribute="top" id="nOX-9f-7tm"/>
+                            <constraint firstItem="mzl-9S-vkd" firstAttribute="top" secondItem="8SQ-aP-apv" secondAttribute="bottom" id="nb2-Tt-7q5"/>
+                            <constraint firstItem="8SQ-aP-apv" firstAttribute="leading" secondItem="r5B-OT-vGm" secondAttribute="leading" id="xuM-pG-rWJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="ZbY-im-yow" id="ndW-eh-0eh"/>
+                        <outlet property="menuRoundVire" destination="zCt-KM-wjS" id="GZ2-fo-kH6"/>
+                        <outlet property="menuView" destination="8SQ-aP-apv" id="ehZ-wU-Htr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yj3-je-6hA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -296,6 +350,7 @@
     </scenes>
     <resources>
         <image name="Back_000000_100" width="100" height="100"/>
+        <image name="Down" width="100" height="100"/>
         <image name="plashkaColor" width="187" height="25"/>
     </resources>
 </document>

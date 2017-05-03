@@ -11,6 +11,9 @@
 		84117E971E9D22530085BA45 /* ScrollImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84117E961E9D22530085BA45 /* ScrollImageVC.swift */; };
 		843A94541EA9FDA100373AC2 /* HorizontalPagingScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A94531EA9FDA100373AC2 /* HorizontalPagingScroll.swift */; };
 		843A94561EA9FDD900373AC2 /* VerticalPagingScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A94551EA9FDD900373AC2 /* VerticalPagingScroll.swift */; };
+		84AA668E1EB6664800BB1AE3 /* UIviewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA668D1EB6664800BB1AE3 /* UIviewX.swift */; };
+		84AA66911EB66E1C00BB1AE3 /* UISliderX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA66901EB66E1C00BB1AE3 /* UISliderX.swift */; };
+		84AA66931EB67A1A00BB1AE3 /* ForTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA66921EB67A1A00BB1AE3 /* ForTestController.swift */; };
 		84ACBE581EAE63D60042C9C3 /*  Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACBE571EAE63D60042C9C3 /*  Attributes.swift */; };
 		84D9AC661E9F9B9E00096D97 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9AC651E9F9B9E00096D97 /* Extension.swift */; };
 		84E463D01E9CBCD5006FAC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E463CF1E9CBCD5006FAC02 /* AppDelegate.swift */; };
@@ -27,6 +30,9 @@
 		84117E961E9D22530085BA45 /* ScrollImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollImageVC.swift; sourceTree = "<group>"; };
 		843A94531EA9FDA100373AC2 /* HorizontalPagingScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalPagingScroll.swift; path = ../HorizontalPagingScroll.swift; sourceTree = "<group>"; };
 		843A94551EA9FDD900373AC2 /* VerticalPagingScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerticalPagingScroll.swift; path = ../VerticalPagingScroll.swift; sourceTree = "<group>"; };
+		84AA668D1EB6664800BB1AE3 /* UIviewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIviewX.swift; path = ../UIviewX.swift; sourceTree = "<group>"; };
+		84AA66901EB66E1C00BB1AE3 /* UISliderX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISliderX.swift; path = ../UISliderX.swift; sourceTree = "<group>"; };
+		84AA66921EB67A1A00BB1AE3 /* ForTestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForTestController.swift; sourceTree = "<group>"; };
 		84ACBE571EAE63D60042C9C3 /*  Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = " Attributes.swift"; path = "../ Attributes.swift"; sourceTree = "<group>"; };
 		84D9AC651E9F9B9E00096D97 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = ../Extension.swift; sourceTree = "<group>"; };
 		84E463CC1E9CBCD5006FAC02 /* FunnyMonkeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunnyMonkeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +67,16 @@
 			name = Examples;
 			sourceTree = "<group>";
 		};
+		84AA668F1EB66AC500BB1AE3 /* UIX */ = {
+			isa = PBXGroup;
+			children = (
+				84AA66921EB67A1A00BB1AE3 /* ForTestController.swift */,
+				84AA668D1EB6664800BB1AE3 /* UIviewX.swift */,
+				84AA66901EB66E1C00BB1AE3 /* UISliderX.swift */,
+			);
+			name = UIX;
+			sourceTree = "<group>";
+		};
 		84E463C31E9CBCD5006FAC02 = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +102,9 @@
 				84E463E31E9CBCF9006FAC02 /* Cell */,
 				84E463E41E9CBD3E006FAC02 /* Model */,
 				84E463E21E9CBCE7006FAC02 /* Support */,
-				84E463D61E9CBCD5006FAC02 /* Assets.xcassets */,
+				84AA668F1EB66AC500BB1AE3 /* UIX */,
 				84E463D81E9CBCD5006FAC02 /* LaunchScreen.storyboard */,
+				84E463D61E9CBCD5006FAC02 /* Assets.xcassets */,
 				84E463DB1E9CBCD5006FAC02 /* Info.plist */,
 			);
 			path = FunnyMonkeys;
@@ -200,8 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AA668E1EB6664800BB1AE3 /* UIviewX.swift in Sources */,
 				84D9AC661E9F9B9E00096D97 /* Extension.swift in Sources */,
 				843A94561EA9FDD900373AC2 /* VerticalPagingScroll.swift in Sources */,
+				84AA66931EB67A1A00BB1AE3 /* ForTestController.swift in Sources */,
+				84AA66911EB66E1C00BB1AE3 /* UISliderX.swift in Sources */,
 				84E463E61E9CBD58006FAC02 /*  Profile.swift in Sources */,
 				84117E971E9D22530085BA45 /* ScrollImageVC.swift in Sources */,
 				84E463EE1E9CC10A006FAC02 /* ImageCell.swift in Sources */,
